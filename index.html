@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09070a">
+  <meta name="description" content="MINLYPHS STORE: descubre y descarga aplicaciones.">
+  <title>MINLYPHS STORE</title>
+  <link rel="icon" href="assets/minlyphs-store-logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="MINLYPHS STORE inicio">
+      <span class="brand-mark">M</span>
+      <span class="brand-name">MINLYPHS <b>STORE</b></span>
+    </a>
+    <div class="top-actions">
+      <button id="themeToggle" class="icon-button" aria-label="Cambiar tema" title="Cambiar tema">☼</button>
+      <a class="admin-link" href="admin/">Administrar</a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">TU ESPACIO DE APLICACIONES</span>
+        <h1>Descubre algo <em>nuevo.</em></h1>
+        <p>Aplicaciones y herramientas seleccionadas para ti.</p>
+        <a class="hero-button" href="#catalogo">Explorar aplicaciones <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit"></div><div class="hero-m">M</div><span class="spark s1">✦</span><span class="spark s2">✧</span>
+      </div>
+    </section>
+
+    <section class="search-row" aria-label="Buscar aplicaciones">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar aplicaciones..." autocomplete="off"></label>
+      <button id="clearSearch" class="clear-button" type="button">Limpiar</button>
+    </section>
+
+    <section class="section-head" id="catalogo">
+      <div><span class="eyebrow">CATÁLOGO</span><h2>Explora aplicaciones</h2></div>
+      <span id="appCount" class="count">0 aplicaciones</span>
+    </section>
+    <nav id="categories" class="categories" aria-label="Categorías">
+      <button class="category active" data-category="Todas">Todas</button>
+      <button class="category" data-category="Herramientas">Herramientas</button>
+      <button class="category" data-category="Juegos">Juegos</button>
+      <button class="category" data-category="Productividad">Productividad</button>
+      <button class="category" data-category="Multimedia">Multimedia</button>
+      <button class="category" data-category="Otros">Otros</button>
+    </nav>
+
+    <section id="appGrid" class="app-grid" aria-live="polite">
+      <div class="empty-state"><div class="empty-icon">✦</div><h3>Tu tienda está preparando su catálogo</h3><p>Pronto encontrarás aquí las primeras aplicaciones.</p></div>
+    </section>
+
+    <section class="trust-note">
+      <span class="trust-icon">✓</span>
+      <div><strong>Descargas transparentes</strong><p>Revisa siempre el nombre, la versión y el origen de cada archivo antes de instalarlo.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer"><span>© <span id="year"></span> MINLYPHS STORE</span><span>YOUR APPS. YOUR WORLD.</span></footer>
+
+  <dialog id="appDialog" class="app-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Cerrar">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
