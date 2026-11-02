@@ -9,7 +9,7 @@
       "category": "Multimedia",
       "version": "1.0.0",
       "description": "Disfruta de tu música favorita con NebulaPro, un reproductor de música con una experiencia cómoda y moderna.",
-      "icon": "assets/nebulapro.png",
+      "icon": "assets/nebula.png",
       "downloadUrl": "https://github.com/kingldz/minlyphs-store/releases/download/v1.0.0/NebulaPro_1.0.0_minlyphs.apk",
       "sha256": "19c6604daa4ecddeb4d9354d6aa0d5c8642e402c1aecc098cf884072ac80fbae"
     }
