@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Preparar publicación | MINLYPHS STORE</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="admin.css"></head>
+<body><header class="topbar"><a class="brand" href="../"><span class="brand-mark">M</span><span class="brand-name">MINLYPHS <b>STORE</b></span></a><a class="admin-link" href="../">Volver a la tienda</a></header>
+<main class="admin-shell"><span class="eyebrow">HERRAMIENTA DE ADMINISTRACIÓN</span><h1>Preparar una aplicación</h1><p class="intro">Completa los datos y genera una nueva versión de <code>apps.json</code>. Luego súbela a tu repositorio de GitHub.</p>
+<div class="notice"><strong>Importante:</strong> este panel prepara el catálogo en tu dispositivo. No publica por sí solo ni almacena tus APK. Nunca pegues aquí un token o contraseña de GitHub.</div>
+<form id="appForm" class="admin-form">
+<label>Nombre de la aplicación<input name="name" required maxlength="60" placeholder="Ej. Mi aplicación"></label>
+<label>Descripción<textarea name="description" required maxlength="500" rows="3" placeholder="¿Qué hace esta aplicación?"></textarea></label>
+<div class="two"><label>Categoría<select name="category"><option>Herramientas</option><option>Juegos</option><option>Productividad</option><option>Multimedia</option><option>Otros</option></select></label><label>Desarrollador<input name="developer" value="MINLYPHS" maxlength="60"></label></div>
+<div class="two"><label>Versión<input name="version" required placeholder="1.0"></label><label>Tamaño<input name="size" placeholder="Ej. 24 MB"></label></div>
+<div class="two"><label>Android mínimo<input name="minAndroid" placeholder="Ej. Android 8.0"></label><label>Enlace del icono<input name="icon" type="url" placeholder="https://..."></label></div>
+<label>Enlace directo del APK<input name="downloadUrl" type="url" required placeholder="https://github.com/USUARIO/REPO/releases/download/.../app.apk"></label>
+<p class="hint">Primero publica el APK en GitHub Releases y copia el enlace directo del archivo APK (no el enlace general de la página del lanzamiento).</p>
+<label>Catálogo actual (opcional)<textarea id="existingCatalog" rows="5" placeholder='Pega aquí el contenido de tu apps.json actual para conservar las aplicaciones ya publicadas.'></textarea></label>
+<button class="hero-button" type="submit">Añadir aplicación y generar catálogo ↓</button>
+</form>
+<div id="result" class="result" hidden><h2>Catálogo preparado</h2><p>Descarga el archivo y reemplaza <code>data/apps.json</code> en tu repositorio.</p><button id="downloadJson" class="hero-button" type="button">Descargar apps.json</button><button id="copyJson" class="secondary-button" type="button">Copiar JSON</button><p class="hint">No olvides subir el archivo actualizado a GitHub para que aparezca en la tienda publicada.</p></div>
+</main><script src="admin.js"></script></body></html>
